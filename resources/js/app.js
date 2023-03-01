@@ -13,5 +13,3 @@ import './bootstrap';
  */
 
 import './components/Example';
-import './components/HelloReact';
-import './components/Counter';

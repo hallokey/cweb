@@ -1,3 +1,6 @@
+<script src="{{ URL::asset('assets/libs/particles.js/particles.js.min.js') }}"></script>
+<script src="{{ URL::asset('assets/js/pages/particles.app.js') }}"></script>
+<script src="{{ URL::asset('assets/js/pages/password-addon.init.js') }}"></script>
 <script src="{{ URL::asset('assets/libs/bootstrap/bootstrap.min.js') }}"></script>
 <script src="{{ URL::asset('assets/libs/simplebar/simplebar.min.js') }}"></script>
 <script src="{{ URL::asset('assets/libs/node-waves/node-waves.min.js') }}"></script>
