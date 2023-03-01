@@ -31,204 +31,121 @@ document.addEventListener("DOMContentLoaded", function () {
     var Draggable = FullCalendar.Draggable;
     var externalEventContainerEl = document.getElementById('external-events');
     var defaultEvents = [{
-            id: 1,
-            title: "World Braille Day",
-            start: "2022-01-04",
-            className: "bg-soft-info",
-            allDay: true
-
+        id: 153,
+        title: 'All Day Event',
+        start: new Date(y, m, 1),
+        className: 'bg-soft-primary',
+        location: 'San Francisco, US',
+        allDay: false,
+        extendedProps: {
+            department: 'All Day Event'
         },
-        {
-            id: 2,
-            title: "World Leprosy Day",
-            start: "2022-01-30",
-            className: "bg-soft-info",
-            allDay: true
+        description: 'An all-day event is an event that lasts an entire day or longer'
+    },
+    {
+        id: 136,
+        title: 'Visit Online Course',
+        start: new Date(y, m, d - 5),
+        end: new Date(y, m, d - 2),
+        allDay: false,
+        className: 'bg-soft-warning',
+        extendedProps: {
+            department: 'Long Event'
         },
-
-        {
-            id: 3,
-            title: "International Mother Language Day",
-            start: "2022-02-21",
-            className: "bg-soft-info",
-            allDay: true
+        description: 'Long Term Event means an incident that last longer than 12 hours.'
+    },
+    {
+        id: 999,
+        title: 'Client Meeting with Alexis',
+        start: new Date(y, m, d + 22, 20, 0),
+        end: new Date(y, m, d + 24, 16, 0),
+        allDay: false,
+        className: 'bg-soft-danger',
+        location: 'California, US',
+        extendedProps: {
+            department: 'Meeting with Alexis'
         },
-
-        {
-            id: 4,
-            title: "International Women's Day",
-            start: "2022-03-08",
-            className: "bg-soft-info",
-            allDay: true
+        description: 'A meeting is a gathering of two or more people that has been convened for the purpose of achieving a common goal through verbal interaction, such as sharing information or reaching agreement.'
+    },
+    {
+        id: 991,
+        title: 'Repeating Event',
+        start: new Date(y, m, d + 4, 16, 0),
+        end: new Date(y, m, d + 9, 16, 0),
+        allDay: false,
+        className: 'bg-soft-primary',
+        location: 'Las Vegas, US',
+        extendedProps: {
+            department: 'Repeating Event'
         },
-
-        {
-            id: 5,
-            title: "World Thinking Day",
-            start: "2022-02-22",
-            className: "bg-soft-info",
-            allDay: true
+        description: 'A recurring or repeating event is simply any event that you will occur more than once on your calendar. ',
+    },
+    {
+        id: 112,
+        title: 'Meeting With Designer',
+        start: new Date(y, m, d, 12, 30),
+        allDay: false,
+        className: 'bg-soft-success',
+        location: 'Head Office, US',
+        extendedProps: {
+            department: 'Meeting'
         },
-
-        {
-            id: 6,
-            title: "International Mother Language Day",
-            start: "2022-03-21",
-            className: "bg-soft-info",
-            allDay: true
+        description: 'Tell how to boost website traffic'
+    },
+    {
+        id: 113,
+        title: 'Weekly Strategy Planning',
+        start: new Date(y, m, d + 9),
+        end: new Date(y, m, d + 11),
+        allDay: false,
+        className: 'bg-soft-danger',
+        location: 'Head Office, US',
+        extendedProps: {
+            department: 'Lunch'
         },
-
-        {
-            id: 7,
-            title: "World Water Day",
-            start: "2022-03-22",
-            className: "bg-soft-info",
-            allDay: true
+        description: 'Strategies for Creating Your Weekly Schedule'
+    },
+    {
+        id: 875,
+        title: 'Birthday Party',
+        start: new Date(y, m, d + 1, 19, 0),
+        allDay: false,
+        className: 'bg-soft-success',
+        location: 'Los Angeles, US',
+        extendedProps: {
+            department: 'Birthday Party'
         },
-
-        {
-            id: 8,
-            title: "World Health Day",
-            start: "2022-04-07",
-            className: "bg-soft-info",
-            allDay: true
+        description: 'Family slumber party – Bring out the blankets and pillows and have a family slumber party! Play silly party games, share special snacks and wind down the fun with a special movie.'
+    },
+    {
+        id: 783,
+        title: 'Click for Google',
+        start: new Date(y, m, 28),
+        end: new Date(y, m, 29),
+        url: 'http://google.com/',
+        className: 'bg-soft-dark',
+    },
+    {
+        id: 456,
+        title: 'Velzon Project Discussion with Team',
+        start: new Date(y, m, d + 23, 20, 0),
+        end: new Date(y, m, d + 24, 16, 0),
+        allDay: false,
+        className: 'bg-soft-info',
+        location: 'Head Office, US',
+        extendedProps: {
+            department: 'Discussion'
         },
-
-
-        {
-            id: 9,
-            title: "International Special Librarians Day",
-            start: "2022-04-16",
-            className: "bg-soft-info",
-            allDay: true
-        },
-
-        {
-            id: 10,
-            title: "Earth Day",
-            start: "2022-04-22",
-            className: "bg-soft-info",
-            allDay: true
-        },
-        {
-            id: 153,
-            title: 'All Day Event',
-            start: new Date(y, m, 1),
-            className: 'bg-soft-primary',
-            location: 'San Francisco, US',
-            allDay: true,
-            extendedProps: {
-                department: 'All Day Event'
-            },
-            description: 'An all-day event is an event that lasts an entire day or longer'
-        },
-        {
-            id: 136,
-            title: 'Visit Online Course',
-            start: new Date(y, m, d - 5),
-            end: new Date(y, m, d - 2),
-            allDay: true,
-            className: 'bg-soft-warning',
-            extendedProps: {
-                department: 'Long Event'
-            },
-            description: 'Long Term Event means an incident that last longer than 12 hours.'
-        },
-        {
-            id: 999,
-            title: 'Client Meeting with Alexis',
-            start: new Date(y, m, d + 22, 20, 0),
-            end: new Date(y, m, d + 24, 16, 0),
-            allDay: true,
-            className: 'bg-soft-danger',
-            location: 'California, US',
-            extendedProps: {
-                department: 'Meeting with Alexis'
-            },
-            description: 'A meeting is a gathering of two or more people that has been convened for the purpose of achieving a common goal through verbal interaction, such as sharing information or reaching agreement.'
-        },
-        {
-            id: 991,
-            title: 'Repeating Event',
-            start: new Date(y, m, d + 4, 16, 0),
-            end: new Date(y, m, d + 9, 16, 0),
-            allDay: true,
-            className: 'bg-soft-primary',
-            location: 'Las Vegas, US',
-            extendedProps: {
-                department: 'Repeating Event'
-            },
-            description: 'A recurring or repeating event is simply any event that you will occur more than once on your calendar. ',
-        },
-        {
-            id: 112,
-            title: 'Meeting With Designer',
-            start: new Date(y, m, d, 12, 30),
-            allDay: true,
-            className: 'bg-soft-success',
-            location: 'Head Office, US',
-            extendedProps: {
-                department: 'Meeting'
-            },
-            description: 'Tell how to boost website traffic'
-        },
-        {
-            id: 113,
-            title: 'Weekly Strategy Planning',
-            start: new Date(y, m, d + 9),
-            end: new Date(y, m, d + 11),
-            allDay: true,
-            className: 'bg-soft-danger',
-            location: 'Head Office, US',
-            extendedProps: {
-                department: 'Lunch'
-            },
-            description: 'Strategies for Creating Your Weekly Schedule'
-        },
-        {
-            id: 875,
-            title: 'Birthday Party',
-            start: new Date(y, m, d + 1, 19, 0),
-            allDay: true,
-            className: 'bg-soft-success',
-            location: 'Los Angeles, US',
-            extendedProps: {
-                department: 'Birthday Party'
-            },
-            description: 'Family slumber party – Bring out the blankets and pillows and have a family slumber party! Play silly party games, share special snacks and wind down the fun with a special movie.'
-        },
-        {
-            id: 783,
-            title: 'Click for Google',
-            start: new Date(y, m, 28),
-            end: new Date(y, m, 29),
-            allDay: true,
-            url: 'http://google.com/',
-            className: 'bg-soft-dark',
-        },
-        {
-            id: 456,
-            title: 'Velzon Project Discussion with Team',
-            start: new Date(y, m, d + 23, 20, 0),
-            end: new Date(y, m, d + 24, 16, 0),
-            allDay: true,
-            className: 'bg-soft-info',
-            location: 'Head Office, US',
-            extendedProps: {
-                department: 'Discussion'
-            },
-            description: 'Tell how to boost website traffic'
-        },
+        description: 'Tell how to boost website traffic'
+    },
     ];
 
-    // init draggable
+    // init dragable
     new Draggable(externalEventContainerEl, {
         itemSelector: '.external-event',
         eventData: function (eventEl) {
             return {
-                id: Math.floor(Math.random() * 11000),
                 title: eventEl.innerText,
-                allDay: true,
                 start: new Date(),
                 className: eventEl.getAttribute('data-class')
             };
@@ -261,6 +178,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
+    var count = true;
+
     var eventCategoryChoice = new Choices("#event-category", {
         searchEnabled: false
     });
@@ -282,21 +201,6 @@ document.addEventListener("DOMContentLoaded", function () {
             var newView = getInitialView();
             calendar.changeView(newView);
         },
-        eventResize: function(info) {
-            var indexOfSelectedEvent = defaultEvents.findIndex(function (x) {
-                return x.id == info.event.id
-            });
-            if (defaultEvents[indexOfSelectedEvent]) {
-                defaultEvents[indexOfSelectedEvent].title = info.event.title;
-                defaultEvents[indexOfSelectedEvent].start = info.event.start;
-                defaultEvents[indexOfSelectedEvent].end = (info.event.end) ? info.event.end : null;
-                defaultEvents[indexOfSelectedEvent].allDay = info.event.allDay;
-                defaultEvents[indexOfSelectedEvent].className = info.event.classNames[0];
-                defaultEvents[indexOfSelectedEvent].description = (info.event._def.extendedProps.description) ? info.event._def.extendedProps.description : '';
-                defaultEvents[indexOfSelectedEvent].location = (info.event._def.extendedProps.location) ? info.event._def.extendedProps.location : '';
-            }
-            upcomingEvent(defaultEvents);
-        },
         eventClick: function (info) {
             document.getElementById("edit-event-btn").removeAttribute("hidden");
             document.getElementById('btn-save-event').setAttribute("hidden", true);
@@ -313,19 +217,18 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("modal-title").innerHTML = "";
             document.getElementById("event-location-tag").innerHTML = selectedEvent.extendedProps.location === undefined ? "No Location" : selectedEvent.extendedProps.location;
             document.getElementById("event-description-tag").innerHTML = selectedEvent.extendedProps.description === undefined ? "No Description" : selectedEvent.extendedProps.description;
-
             // Edit Modal
             document.getElementById("event-title").value = selectedEvent.title;
             document.getElementById("event-location").value = selectedEvent.extendedProps.location === undefined ? "No Location" : selectedEvent.extendedProps.location;
             document.getElementById("event-description").value = selectedEvent.extendedProps.description === undefined ? "No Description" : selectedEvent.extendedProps.description;
             document.getElementById("eventid").value = selectedEvent.id;
 
-            if (selectedEvent.classNames[0]) {
-                eventCategoryChoice.destroy();
-                eventCategoryChoice = new Choices("#event-category", {
+            if(selectedEvent.classNames[0]){
+                  eventCategoryChoice.destroy();
+                  eventCategoryChoice = new Choices("#event-category", {
                     searchEnabled: false
                 });
-                eventCategoryChoice.setChoiceByValue(selectedEvent.classNames[0]);
+                  eventCategoryChoice.setChoiceByValue(selectedEvent.classNames[0]);
             }
             var st_date = selectedEvent.start;
             var ed_date = selectedEvent.end;
@@ -343,6 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
             };
             var r_date = ed_date == null ? (str_dt(st_date)) : (str_dt(st_date)) + ' to ' + (str_dt(ed_date));
             var er_date = ed_date == null ? (date_r(st_date)) : (date_r(st_date)) + ' to ' + (date_r(ed_date));
+
 
             flatpickr(start_date, {
                 defaultDate: er_date,
@@ -368,6 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             var gt_time = getTime(selectedEvent.start);
             var ed_time = getTime(selectedEvent.end);
+
 
             if (gt_time == ed_time) {
                 document.getElementById('event-time').setAttribute("hidden", true);
@@ -408,11 +313,40 @@ document.addEventListener("DOMContentLoaded", function () {
         dateClick: function (info) {
             addNewEvent(info);
         },
+
+        eventSources: [
+            // your event source
+            {
+                url: 'assets/js/pages/plugins/event.init.json',
+                method: 'GET',
+                extraParams: {
+                    custom_param1: 'something',
+                    custom_param2: 'somethingelse'
+                },
+                success: function (data) {
+                    var events_list = data;
+                    if (count) {
+                        events_list.forEach(function (element) {
+                            var d_event = {
+                                id: element.id,
+                                title: element.title,
+                                start: new Date(element.start),
+                                end: new Date(element.end),
+                                className: element.className,
+                                description: element.description
+                            };
+                            defaultEvents.push(d_event);
+                        });
+                        upcomingEvent(defaultEvents);
+                        count = false;
+                    }
+                },
+            }
+        ],
         events: defaultEvents,
-        eventReceive: function (info) {
-            var newid = parseInt(info.event.id);
+        eventReceive: function(info) {
             var newEvent = {
-                id: newid,
+                id: Math.floor(Math.random() * 11000),
                 title: info.event.title,
                 start: info.event.start,
                 allDay: info.event.allDay,
@@ -421,28 +355,29 @@ document.addEventListener("DOMContentLoaded", function () {
             defaultEvents.push(newEvent);
             upcomingEvent(defaultEvents);
         },
-        eventDrop: function (info) {
-            var indexOfSelectedEvent = defaultEvents.findIndex(function (x) {
-                return x.id == info.event.id
-            });
-            if (defaultEvents[indexOfSelectedEvent]) {
-                defaultEvents[indexOfSelectedEvent].title = info.event.title;
-                defaultEvents[indexOfSelectedEvent].start = info.event.start;
-                defaultEvents[indexOfSelectedEvent].end = (info.event.end) ? info.event.end : null;
-                defaultEvents[indexOfSelectedEvent].allDay = info.event.allDay;
-                defaultEvents[indexOfSelectedEvent].className = info.event.classNames[0];
-                defaultEvents[indexOfSelectedEvent].description = (info.event._def.extendedProps.description) ? info.event._def.extendedProps.description : '';
-                defaultEvents[indexOfSelectedEvent].location = (info.event._def.extendedProps.location) ? info.event._def.extendedProps.location : '';
-            }
+        eventDrop: function(info) {
+            var indexOfSelectedEvent = defaultEvents.findIndex(function(x) { return x.id == info.event.id});
+                if(defaultEvents[indexOfSelectedEvent]) {
+                    defaultEvents[indexOfSelectedEvent].title = info.event.title;
+                    defaultEvents[indexOfSelectedEvent].start = info.event.start;
+                    defaultEvents[indexOfSelectedEvent].end = (info.event.end) ? info.event.end : null;
+                    defaultEvents[indexOfSelectedEvent].allDay = info.event.allDay;
+                    defaultEvents[indexOfSelectedEvent].className = info.event.classNames[0];
+                    defaultEvents[indexOfSelectedEvent].description = (info.event._def.extendedProps.description) ? info.event._def.extendedProps.description : '';
+                    defaultEvents[indexOfSelectedEvent].location = (info.event._def.extendedProps.location) ? info.event._def.extendedProps.location : '';
+                }
+
             upcomingEvent(defaultEvents);
         }
+
+
     });
 
     calendar.render();
 
-    upcomingEvent(defaultEvents);
     /*Add new event*/
     // Form to add new event
+
     formEvent.addEventListener('submit', function (ev) {
         ev.preventDefault();
         var updatedTitle = document.getElementById("event-title").value;
@@ -450,23 +385,23 @@ document.addEventListener("DOMContentLoaded", function () {
         var start_date = (document.getElementById("event-start-date").value).split("to");
         var updateStartDate = new Date(start_date[0].trim());
         var updateEndDate = (start_date[1]) ? new Date(start_date[1].trim()) : '';
-
         var end_date = null;
         var event_location = document.getElementById("event-location").value;
         var eventDescription = document.getElementById("event-description").value;
         var eventid = document.getElementById("eventid").value;
         var all_day = false;
         if (start_date.length > 1) {
-            var end_date = new Date(start_date[1]);
-            end_date.setDate(end_date.getDate() + 1);
+            var date = new Date(start_date[1]);
+            date = date.setTime(date.getTime() + (23 * 60 * 60 * 1000));
+            // updateEndDate;
             start_date = new Date(start_date[0]);
-            all_day = true;
         } else {
             var e_date = start_date;
             var start_time = (document.getElementById("timepicker1").value).trim();
             var end_time = (document.getElementById("timepicker2").value).trim();
             start_date = new Date(start_date + "T" + start_time);
             end_date = new Date(e_date + "T" + end_time);
+            all_day = true;
         }
         var e_id = defaultEvents.length + 1;
 
@@ -480,13 +415,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 selectedEvent.setProp("classNames", [updatedCategory]);
                 selectedEvent.setStart(updateStartDate);
                 selectedEvent.setEnd(updateEndDate);
+                // selectedEvent.setStart();
+                // selectedEvent.setDates(updateStartDate,updateEndDate);
                 selectedEvent.setAllDay(all_day);
                 selectedEvent.setExtendedProp("description", eventDescription);
                 selectedEvent.setExtendedProp("location", event_location);
-                var indexOfSelectedEvent = defaultEvents.findIndex(function (x) {
-                    return x.id == selectedEvent.id
-                });
-                if (defaultEvents[indexOfSelectedEvent]) {
+
+                var indexOfSelectedEvent = defaultEvents.findIndex(function(x) { return x.id == selectedEvent.id});
+                if(defaultEvents[indexOfSelectedEvent]) {
                     defaultEvents[indexOfSelectedEvent].title = updatedTitle;
                     defaultEvents[indexOfSelectedEvent].start = updateStartDate;
                     defaultEvents[indexOfSelectedEvent].end = updateEndDate;
@@ -545,26 +481,28 @@ function flatPickrInit() {
     var config = {
         enableTime: true,
         noCalendar: true,
+        defaultDate: "09:00",
+        dateFormat: "H:i",
     };
     var date_range = flatpickr(
         start_date, {
-            enableTime: false,
-            mode: "range",
-            minDate: "today",
-            onChange: function (selectedDates, dateStr, instance) {
-                var date_range = dateStr;
-                var dates = date_range.split("to");
-                if (dates.length > 1) {
-                    document.getElementById('event-time').setAttribute("hidden", true);
-                } else {
-                    document.getElementById("timepicker1").parentNode.classList.remove("d-none");
-                    document.getElementById("timepicker1").classList.replace("d-none", "d-block");
-                    document.getElementById("timepicker2").parentNode.classList.remove("d-none");
-                    document.getElementById("timepicker2").classList.replace("d-none", "d-block");
-                    document.getElementById('event-time').removeAttribute("hidden");
-                }
-            },
-        });
+        enableTime: false,
+        mode: "range",
+        minDate: "today",
+        onChange: function (selectedDates, dateStr, instance) {
+            var date_range = dateStr;
+            var dates = date_range.split("to");
+            if (dates.length > 1) {
+                document.getElementById('event-time').setAttribute("hidden", true);
+            } else {
+                document.getElementById("timepicker1").parentNode.classList.remove("d-none");
+                document.getElementById("timepicker1").classList.replace("d-none", "d-block");
+                document.getElementById("timepicker2").parentNode.classList.remove("d-none");
+                document.getElementById("timepicker2").classList.replace("d-none", "d-block");
+                document.getElementById('event-time').removeAttribute("hidden");
+            }
+        },
+    });
     flatpickr(timepicker1, config);
     flatpickr(timepicker2, config);
 
@@ -644,51 +582,43 @@ function upcomingEvent(a) {
         return (new Date(o1.start)) - (new Date(o2.start));
     });
     document.getElementById("upcoming-event-list").innerHTML = null;
-    Array.from(a).forEach(function (element) {
+    a.forEach(function (element) {
+
         var title = element.title;
-        if (element.end) {
-            endUpdatedDay = new Date(element.end);
-            var updatedDay = endUpdatedDay.setDate(endUpdatedDay.getDate() - 1);
-          }
-        var e_dt = updatedDay ? updatedDay : undefined;
+        var e_dt = element.end;
         if (e_dt == "Invalid Date" || e_dt == undefined) {
             e_dt = null;
         } else {
-            const newDate = new Date(e_dt).toLocaleDateString('en', { year: 'numeric', month: 'numeric', day: 'numeric' });
-            e_dt = new Date(newDate)
-              .toLocaleDateString("en-GB", {
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-              })
-              .split(" ")
-              .join(" ");
+            var newDate = new Date(e_dt).toLocaleDateString()
+            e_dt = new Date(newDate).toLocaleDateString('en-GB', {
+                day : 'numeric',
+                month : 'short',
+                year : 'numeric'
+            }).split(' ').join(' ');
         }
-        var st_date = element.start ? str_dt(element.start) : null;
-        var ed_date = updatedDay ? str_dt(updatedDay) : null;
+
+        var st_date = str_dt(element.start);
+        var ed_date = str_dt(element.end);
         if (st_date === ed_date) {
             e_dt = null;
         }
         var startDate = element.start;
-        if (startDate === "Invalid Date" || startDate === undefined) {
+        if (startDate == "Invalid Date" || startDate == undefined) {
             startDate = null;
         } else {
-            const newDate = new Date(startDate).toLocaleDateString('en', { year: 'numeric', month: 'numeric', day: 'numeric' });
-            startDate = new Date(newDate)
-              .toLocaleDateString("en-GB", {
-                day: "numeric",
-                month: "short",
-                year: "numeric",
-              })
-              .split(" ")
-              .join(" ");
+            var newDate = new Date(startDate).toLocaleDateString()
+            startDate = new Date(newDate).toLocaleDateString('en-GB', {
+                day : 'numeric',
+                month : 'short',
+                year : 'numeric'
+            }).split(' ').join(' ');
         }
 
         var end_dt = (e_dt) ? " to " + e_dt : '';
         var category = (element.className).split("-");
         var description = (element.description) ? element.description : "";
         var e_time_s = tConvert(getTime(element.start));
-        var e_time_e = tConvert(getTime(updatedDay));
+        var e_time_e = tConvert(getTime(element.end));
         if (e_time_s == e_time_e) {
             var e_time_s = "Full day event";
             var e_time_e = null;
@@ -698,11 +628,11 @@ function upcomingEvent(a) {
         u_event = "<div class='card mb-3'>\
                         <div class='card-body'>\
                             <div class='d-flex mb-3'>\
-                                <div class='flex-grow-1'><i class='mdi mdi-checkbox-blank-circle me-2 text-" + category[2] + "'></i><span class='fw-medium'>" + startDate + end_dt + " </span></div>\
+                                <div class='flex-grow-1'><i class='mdi mdi-checkbox-blank-circle me-2 text-" + category[2] + "'></i><span class='fw-medium'>" + startDate + end_dt + "</span></div>\
                                 <div class='flex-shrink-0'><small class='badge badge-soft-primary ms-auto'>" + e_time_s + e_time_e + "</small></div>\
                             </div>\
                             <h6 class='card-title fs-16'> " + title + "</h6>\
-                            <p class='text-muted text-truncate-two-lines mb-0'> " + description + "</p>\
+                            <p class='text-muted text-truncate-two-lines mb-0'> "+ description + "</p>\
                         </div>\
                     </div>";
         document.getElementById("upcoming-event-list").innerHTML += u_event;
@@ -730,7 +660,9 @@ function tConvert(time) {
 }
 
 var str_dt = function formatDate(date) {
-    var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    var monthNames = ["January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
     var d = new Date(date),
         month = '' + monthNames[(d.getMonth())],
         day = '' + d.getDate(),

@@ -8,17 +8,22 @@
         <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
         <meta content="Themesbrand" name="author" />
 
-        @include('layouts.head-css')
         <!-- Scripts -->        
         @routes
         @viteReactRefresh
         @vite(['resources/js/app.jsx', "resources/js/Pages/{$page['component']}.jsx"])
         @inertiaHead
+
+        @include('layouts.head-css')
     </head>
         @include('layouts.body')
         
         @inertia
         
+        <script src="{{ URL::asset('assets/libs/particles.js/particles.js.min.js') }}"></script>
+        <script src="{{ URL::asset('assets/js/pages/particles.app.js') }}"></script>
+        <script src="{{ URL::asset('assets/js/pages/password-addon.init.js') }}"></script>
+
         @include('layouts.vendor-scripts')
         
     </body>
