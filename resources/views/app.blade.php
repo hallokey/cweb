@@ -18,8 +18,8 @@
         @inertiaHead
     </head>
         @include('layouts.body')
-            
-            @inertia
+
+        @inertia
             
         @include('layouts.vendor-scripts')
         

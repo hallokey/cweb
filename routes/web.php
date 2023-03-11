@@ -16,11 +16,19 @@ use Inertia\Inertia;
 |
 */
 
-Route::redirect('/', 'auth/signin'); // direct to prefix:prototype -> get-url:login
+// Route::redirect('/', 'auth/signin'); // direct to prefix:prototype -> get-url:login
 
 Route::prefix('auth')->group(function (){
-    Route::get('/signin', function () {
-        return Inertia::render('Auth/AuthSignin');
+    // Route::get('/signin', function () {
+    //     return Inertia::render('Auth/AuthSignin');
+    // });
+
+    Route::get('/signin', [App\Http\Controllers\CFAuthController::class, 'Index'])->name('login');
+});
+
+Route::prefix('pages')->group(function (){
+    Route::get('/main', function () {
+        return Inertia::render('Main/StarterPage');
     });
 });
 

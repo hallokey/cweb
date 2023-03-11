@@ -1,4 +1,6 @@
-export default function Login(){
+import React from 'react';
+
+export default function AuthSignin(){
     return (
         <div class="auth-page-wrapper pt-5">
             <div class="auth-one-bg-position auth-one-bg" id="auth-particles">
@@ -21,7 +23,7 @@ export default function Login(){
                                         <img src="/assets/images/logo-light.png" alt="" height="20" />
                                     </a>
                                 </div>
-                                <p class="mt-3 fs-15 fw-medium">Church Attendance Management System</p>
+                                <p class="mt-3 fs-15 fw-medium">Church Attendance Management System </p>
                             </div>
                         </div>
                     </div>
@@ -32,7 +34,7 @@ export default function Login(){
 
                                 <div class="card-body p-4">
                                     <div class="text-center mt-2">
-                                        <h5 class="text-primary">Selamat Datang !</h5>
+                                        <h5 class="text-primary">Selamat Datang ! </h5>
                                         <p class="text-muted">Silahkan masukkan Username dan Password.</p>
                                     </div>
                                     <div class="p-2 mt-4">
